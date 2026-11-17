@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Iceland Journey</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header id="top">
+    <p>MY TRAVEL PAGE</p>
+    <h1>A Trip to Iceland</h1>
+    <p>Scroll down and enjoy the view</p>
+  </header>
+
+  <main>
+    <section class="scene" aria-label="A layered view of mountains and a lake">
+      <div class="sun layer" data-speed="0.1"></div>
+      <div class="cloud cloud-one layer" data-speed="0.2"></div>
+      <div class="cloud cloud-two layer" data-speed="0.25"></div>
+      <div class="mountains far layer" data-speed="0.3"></div>
+      <div class="mountains near layer" data-speed="0.5"></div>
+      <div class="lake layer" data-speed="0.65"></div>
+      <div class="tree-line layer" data-speed="0.8" aria-hidden="true">
+        <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+      </div>
+      <div class="scene-title"><span>64° N · ICELAND</span><h2>Take the scenic route</h2></div>
+      <a class="scroll-down" href="#about">↓ &nbsp; Scroll to explore</a>
+    </section>
+
+    <section class="about" id="about">
+      <div>
+        <p class="small-title">A PLACE TO EXPLORE</p>
+        <h2>Welcome to Iceland</h2>
+        <p>Iceland is full of waterfalls, mountains, hot springs, and beautiful views. This page shows a small part of a journey around the island.</p>
+      </div>
+      <div class="about-card">
+        <span>01</span>
+        <h3>See a waterfall</h3>
+        <p>Walk close to the water and feel the cool mist in the air.</p>
+      </div>
+      <div class="about-card">
+        <span>02</span>
+        <h3>Watch the sky</h3>
+        <p>On a dark night, look up and you might see the northern lights.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>Made for my parallax scrolling task · <a href="#top">Back to top ↑</a></footer>
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,217 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  color: #20352f;
+  background: #f4f4ed;
+  font-family: Arial, sans-serif;
+}
+
+header {
+  padding: 45px 20px 35px;
+  text-align: center;
+}
+
+header p:first-child,
+.small-title {
+  color: #44836b;
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+header h1 {
+  margin: 12px 0;
+  font-size: clamp(38px, 7vw, 66px);
+}
+
+header p:last-child {
+  color: #66736e;
+}
+
+.scene {
+  position: relative;
+  height: 75vh;
+  min-height: 480px;
+  overflow: hidden;
+  background: linear-gradient(#92b9bb 0%, #d8e2d1 65%, #75978a 100%);
+}
+
+.layer {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  will-change: transform;
+}
+
+.sun {
+  top: 12%;
+  left: 68%;
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  background: #f3db9b;
+  box-shadow: 0 0 45px #fff0bf;
+}
+
+.cloud {
+  top: 22%;
+  width: 150px;
+  height: 35px;
+  border-radius: 50%;
+  background: #ffffffa8;
+}
+
+.cloud::before,
+.cloud::after {
+  position: absolute;
+  bottom: 5px;
+  width: 60px;
+  height: 40px;
+  border-radius: 50%;
+  background: inherit;
+  content: "";
+}
+
+.cloud::before { left: 25px; }
+.cloud::after { left: 65px; }
+.cloud-one { left: 13%; }
+.cloud-two { top: 34%; left: 73%; transform: scale(.7); }
+
+.mountains {
+  bottom: 20%;
+  height: 55%;
+  clip-path: polygon(0 60%, 13% 30%, 22% 52%, 39% 5%, 55% 60%, 72% 22%, 86% 57%, 100% 28%, 100% 100%, 0 100%);
+}
+
+.far {
+  background: #718d88;
+}
+
+.near {
+  bottom: 11%;
+  height: 48%;
+  clip-path: polygon(0 55%, 18% 18%, 32% 58%, 50% 10%, 70% 61%, 83% 25%, 100% 52%, 100% 100%, 0 100%);
+  background: #405f58;
+}
+
+.lake {
+  bottom: 0;
+  height: 30%;
+  background: linear-gradient(#759a91, #345e5c);
+}
+
+.tree-line {
+  bottom: 0;
+  display: flex;
+  height: 32%;
+  align-items: end;
+  justify-content: space-around;
+}
+
+.tree-line i {
+  width: 55px;
+  height: 75%;
+  background: #183a35;
+  clip-path: polygon(50% 0, 70% 32%, 61% 32%, 83% 62%, 68% 62%, 100% 91%, 60% 91%, 60% 100%, 40% 100%, 40% 91%, 0 91%, 32% 62%, 17% 62%, 39% 32%, 30% 32%);
+}
+
+.tree-line i:nth-child(even) {
+  height: 100%;
+}
+
+.scene-title {
+  position: absolute;
+  top: 34%;
+  left: 50%;
+  width: 90%;
+  color: white;
+  text-align: center;
+  text-shadow: 0 2px 12px #17302e88;
+  transform: translateX(-50%);
+}
+
+.scene-title span {
+  font-size: 11px;
+  letter-spacing: 3px;
+}
+
+.scene-title h2 {
+  margin: 12px 0;
+  font-size: clamp(30px, 6vw, 58px);
+}
+
+.scroll-down {
+  position: absolute;
+  bottom: 24px;
+  left: 50%;
+  color: white;
+  font-size: 13px;
+  text-decoration: none;
+  transform: translateX(-50%);
+}
+
+.about {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 24px;
+  max-width: 1100px;
+  margin: auto;
+  padding: 95px 25px;
+}
+
+.about h2 {
+  margin: 10px 0;
+  font-size: 36px;
+}
+
+.about > div:first-child p:last-child,
+.about-card p {
+  color: #66736e;
+  line-height: 1.7;
+}
+
+.about-card {
+  padding: 24px;
+  border-radius: 10px;
+  background: #e5e9df;
+}
+
+.about-card span {
+  color: #44836b;
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.about-card h3 {
+  margin: 30px 0 8px;
+}
+
+footer {
+  padding: 24px;
+  background: #20352f;
+  color: white;
+  text-align: center;
+  font-size: 13px;
+}
+
+footer a {
+  color: #b9e4cf;
+}
+
+@media (max-width: 700px) {
+  .scene { height: 68vh; min-height: 420px; }
+  .tree-line i { width: 38px; }
+  .about { grid-template-columns: 1fr; padding: 65px 22px; }
+  .about h2 { font-size: 31px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+}
